@@ -1,0 +1,18 @@
+# G7 Countries Web Application
+
+## Description
+A web application that provides information about G7 countries, including the latest news, country details, and user preferences.
+
+## Key Features
+- User Authentication: Allows users to log in and out, storing user data in local storage.
+- Light/Dark Mode: Users can toggle between light and dark modes, with preference stored in local storage.
+- Filtering Results: Users can filter country information, with settings saved in local storage.
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+## How to Run
+1. Clone the repository.
+2. Open `login.html` in a web browser.
