@@ -7,7 +7,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     
     if (username === 'admin' && password === '123456') {
         
-        window.location.href = 'main.html';
+        window.location.href = 'index.html';
     } else {
         
         document.getElementById('error-message').textContent = 'Wrong login or password.';
