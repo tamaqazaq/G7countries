@@ -1,7 +1,7 @@
-// Объект для хранения информации о G7 странах
+
 function logout() {
-    // Здесь можно добавить код для очистки сессии или удаления данных пользователя, если необходимо
-    window.location.href = "login.html"; // Перенаправление на страницу входа
+    
+    window.location.href = "login.html";
 }
 
 const g7Countries = [

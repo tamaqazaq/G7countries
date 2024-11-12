@@ -1,31 +1,52 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="log.css">
-    
-    <title>Вход</title>
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="theme.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    
+    <div class="container" id="login-container">
         <h1>Login</h1>
-        
         <form id="login-form">
             <div>
-                <label for="username">Login:</label>
-                <input type="text" id="username" required>
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" required>
             </div>
             <div>
-                <label for="password">Password:</label>
-                <input type="password" id="password" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
             </div>
             <div>
-                <button type="submit">Go</button>
+                <button type="submit">Login</button>
             </div>
-            <div id="error-message"></div>
+            <div id="login-error-message"></div>
         </form>
+        <p>Don't have an account? <a href="#" id="show-register">Register here</a></p>
     </div>
-    <script src="log.js"></script>
+
+    <div class="container" id="register-container" style="display: none;">
+        <h1>Register</h1>
+        <form id="register-form">
+            <div>
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username" required>
+            </div>
+            <div>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required>
+            </div>
+            <div>
+                <button type="submit">Register</button>
+            </div>
+            <div id="register-error-message"></div>
+        </form>
+        <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+    </div>
+   
+    <script src="login.js"></script>
 </body>
 </html>

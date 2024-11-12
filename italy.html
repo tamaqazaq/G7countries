@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Italy - G7 Countries</title>
-   
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Italy - G7</a>
-            <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="usa.html">USA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="canada.html">Canada</a></li>
-                    <li class="nav-item"><a class="nav-link" href="germany.html">Germany</a></li>
-                    <li class="nav-item"><a class="nav-link" href="japan.html">Japan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="france.html">France</a></li>
-                    <li class="nav-item"><a class="nav-link" href="uk.html">United Kingdom</a></li>
-                    <li class="nav-item"><a class="nav-link" href="olympics.html">Olympics 2024</a></li>
-                </ul>
-            </div>
+          <a class="navbar-brand" href="#">Italy - G7</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="usa.html">USA</a></li>
+              <li class="nav-item"><a class="nav-link" href="canada.html">Canada</a></li>
+              <li class="nav-item"><a class="nav-link" href="germany.html">Germany</a></li>
+              <li class="nav-item"><a class="nav-link" href="japan.html">Japan</a></li>
+              <li class="nav-item"><a class="nav-link" href="france.html">France</a></li>
+              <li class="nav-item"><a class="nav-link" href="uk.html">United Kingdom</a></li>
+              <li class="nav-item"><a class="nav-link" href="olympics.html">Olympics 2024</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
+      <header>
+        <button id="theme-toggle" class="btn btn-outline-dark mt-3">Change theme</button>
+      </header>
+      
     <div class="container mt-4">
         <h1>Italy</h1>
         
@@ -83,21 +93,5 @@
                 </div>
             </div>
         </div>
-        
-        <audio id="backgroundMusic" src="audio/italy.mp3" preload="auto" autoplay loop></audio>
-        <button id="playMusicButton">Play Music</button> 
-        <script>
-            document.getElementById('playMusicButton').addEventListener('click', function() {
-        var audio = document.getElementById('backgroundMusic');
-        audio.play();
-    });
-    
-        </script>
-    
-    <footer class="bg-light text-center py-3 mt-4">
-        <p>Daulet Ermukhanov</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

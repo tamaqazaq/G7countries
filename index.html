@@ -4,90 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G7 Countries</title>
-    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+    <script src="theme.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="main_styles.css">
-    
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">G7 Countries</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="usa.html">USA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="canada.html">Canada</a></li>
+                    <li class="nav-item"><a class="nav-link" href="germany.html">Germany</a></li>
+                    <li class="nav-item"><a class="nav-link" href="japan.html">Japan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="france.html">France</a></li>
+                    <li class="nav-item"><a class="nav-link" href="italy.html">Italy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="uk.html">United Kingdom</a></li>
+                    <li class="nav-item"><a class="nav-link" href="olympics.html">Olympics 2024</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+                </ul>
+                <button id="logoutButton" class="btn btn-danger">Logout</button>
+            </div>
+        </div>
+    </nav>
     <header>
-        <h1>Welcome to G7 Countries</h1>
-        <nav>
-            <ul>
-                <li><a href="usa.html">USA</a></li>
-                <li><a href="canada.html">Canada</a></li>
-                <li><a href="germany.html">Germany</a></li>
-                <li><a href="japan.html">Japan</a></li>
-                <li><a href="france.html">France</a></li>
-                <li><a href="italy.html">Italy</a></li>
-                <li><a href="uk.html">United Kingdom</a></li>
-                <li><a href="olympics.html">Olympics 2024</a></li>
-                <li><a href="contact_us.html">Contact us</a></li>
-            </ul>
-        </nav>
-
-        <button id="logoutButton" class="btn btn-danger" onclick="logout()">Logout</button>
+        <button id="theme-toggle" class="btn btn-outline-dark mt-3">Change theme</button>
     </header>
+    <div id="profile-section" style="display: none;">
+        <h2>Welcome, <span id="profile-name"></span>!</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Your Details</h5>
+                <p><strong>Username:</strong> <span id="profile-username"></span></p>
+                <p><strong>Password:</strong> <span id="profile-password"></span></p>
+            </div>
+        </div>
+        <button id="logoutButton" class="btn btn-danger mt-3">Logout</button>
+    </div>
+    <div class="container mt-4">
+        <!-- Profile Section -->
+        <div id="profile-section" style="display: none;">
+            <h2>Welcome, <span id="profile-name"></span>!</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Account Details</h5>
+                    <p><strong>Name:</strong> <span id="profile-name-full"></span></p>
+                    <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                </div>
+            </div>
+            <button id="logoutButton" class="btn btn-danger mt-3">Logout</button>
+        </div>
     
-    <hr>
-    
-
-    <main>
-        <section>
-            <h2>About G7</h2>
-             <p>The <strong>Group of Seven (G7)</strong> is an <strong>intergovernmental political and economic forum</strong> consisting of <strong>Canada, France, Germany, Italy, Japan, the United Kingdom</strong>, and the <strong>United States</strong>; additionally, the <strong>European Union (EU)</strong> is a <i>"non-enumerated member"</i>. It is organized around shared values of <strong>pluralism, liberal democracy</strong>, and <strong>representative government</strong>. G7 members are major <strong>IMF advanced economies</strong>. Originating from an <strong>ad hoc</strong> gathering of finance ministers in 1973, the G7 has since become a formal, high-profile venue for discussing and coordinating solutions to major global issues, especially in the areas of <strong>trade, security, economics</strong>, and <strong>climate change</strong>. Each member's head of government or state, along with the EU's <strong>Commission President</strong> and <strong>European Council President</strong>, meet annually at the <strong>G7 Summit</strong>; other high-ranking officials of the G7 and the EU meet throughout the year. Representatives of other states and international organizations are often invited as guests, with Russia having been a formal member (as part of the G8) from 1997 until its expulsion in 2014.</p>              <p>The G7 operates without a formal treaty, permanent secretariat, or official headquarters. Its leadership rotates annually among the member countries, with the presiding nation setting the group's agenda and hosting the annual summit. In 2024, <strong>Italy holds the presidency</strong>. Despite lacking a legal foundation, the G7 is recognized for its considerable global influence. The group has played a key role in driving several major international efforts, such as <strong>fighting the HIV/AIDS pandemic</strong>, providing financial support to <strong>developing nations</strong>, and addressing <strong>climate change</strong> through agreements like the <strong>Paris Accord</strong>. Nonetheless, the G7 has faced criticism for its <strong>limited membership</strong>, lack of diversity in global representation, and perceived ineffectiveness. The combined population of the G7 countries is approximately <strong>780 million</strong>, making up nearly <strong>10% of the world's population</strong>. Together, they account for around <strong>50% of global nominal net wealth</strong> and about <strong>30% of the world's GDP</strong> as of 2024. In recent years, there has been ongoing debate about expanding the G7. Some, like <strong>Ronald A. Klain</strong> from the Carnegie Endowment, argue that due to the <strong>Eurocentric nature</strong> of the group and <strong>Japan</strong> being the sole Asian representative, it would make sense to include countries like <strong>South Korea</strong> and <strong>Australia</strong>, transforming the G7 into a <strong>G9</strong>.</p>
-        </section>
-
-        <figure>
-            <img src="images/g7-flag.jpg" alt="G7 Flag" width="322">
-            <img src="images/world-map.jpg" alt="World Map" width="230">
-            <img src="images/g7-countries.png" alt="G7 Countries" width="300">
-            
-            
-        </figure>
-
-        <hr>
-        <section>
-            <h2>G7 Countries</h2>
-            <ul id="countryList"></ul>
-        </section>
-
-        <section>
-            <h2>Latest News on G7</h2>
-            <!-- Bootstrap Carousel -->
-            <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/news1.png" class="d-block w-100" alt="News Image 1">
+        <!-- Main Content (Hidden for Logged-In Users) -->
+        <div id="main-content">
+            <h1>G7 Countries</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/g7-flag.jpg" alt="G7 Flag" class="img-fluid mb-3">
+                    <img src="images/world-map.jpg" alt="World Map" class="img-fluid mt-3">
+                </div>
+                <div class="col-md-8">
+                    <h2>About G7</h2>
+                    <p>The <strong>Group of Seven (G7)</strong> is an intergovernmental political and economic forum consisting of <strong>Canada, France, Germany, Italy, Japan, the United Kingdom</strong>, and the <strong>United States</strong>. It discusses and coordinates solutions to global issues like <strong>trade, security, economics, and climate change</strong>.</p>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Founded</h5>
+                            <p class="card-text">1973</p>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="images/news2.png" class="d-block w-100" alt="News Image 2">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Members</h5>
+                            <p class="card-text">Canada, France, Germany, Italy, Japan, United Kingdom, United States</p>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="images/news3.png" class="d-block w-100" alt="News Image 3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Current President</h5>
+                            <p class="card-text">Italy (2024)</p>
+                        </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a>
             </div>
-        </section>
-    </main>
-    
+            <audio id="backgroundMusic" src="audio/G7.mp3" preload="auto" loop></audio>
+            <button id="playMusicButton" class="btn btn-custom mt-3 mb-3">Play Music</button>
+        </div>
+    </div>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="mainscr.js"></script>
+        <script>
+                    document.getElementById('playMusicButton').addEventListener('click', function() {
+            var audio = document.getElementById('backgroundMusic');
+            audio.play();
+        });
+        </script>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2>Latest News</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/news1.png" class="d-block w-100" alt="News Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/news2.png" class="d-block w-100" alt="News Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/news3.png" class="d-block w-100" alt="News Image 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.getElementById("logoutButton").addEventListener("click", function () {
+    // Optionally clear session data if needed
+    sessionStorage.clear();
+    localStorage.clear();
+
+    // Redirect to login.html
+    window.location.href = "login.html";
+});
+</script>
+<script>
+    // Check if user is logged in
+    if (sessionStorage.getItem('username') && sessionStorage.getItem('password')) {
+        // Show the profile section
+        document.getElementById('profile-section').style.display = 'block';
+        document.getElementById('main-content').style.display = 'none';
+
+        // Display user details
+        document.getElementById('profile-name').textContent = sessionStorage.getItem('username');
+        document.getElementById('profile-username').textContent = sessionStorage.getItem('username');
+        document.getElementById('profile-password').textContent = sessionStorage.getItem('password');
+    } else {
+        // Show the main content if no user is logged in
+        document.getElementById('profile-section').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+    }
+
+    // Logout functionality
+    document.getElementById('logoutButton').addEventListener('click', function () {
+        sessionStorage.clear(); // Clear session data
+        window.location.reload(); // Reload the page
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

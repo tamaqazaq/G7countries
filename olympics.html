@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-
     <title>Olympics 2024 - G7 Countries</title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js" defer></script>
+    <script src="olymp.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Olympics</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,24 +27,26 @@
                     <li class="nav-item"><a class="nav-link" href="germany.html">Germany</a></li>
                     <li class="nav-item"><a class="nav-link" href="japan.html">Japan</a></li>
                     <li class="nav-item"><a class="nav-link" href="france.html">France</a></li>
+                    <li class="nav-item"><a class="nav-link" href="italy.html">Italy</a></li>
                     <li class="nav-item"><a class="nav-link" href="uk.html">United Kingdom</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="my-4">
-        <div class="container">
-            <div class="video-container">
-                <video controls class="w-100">
-                    <source src="images/Paris 2024 Olympic Games.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </section>
+    <header>
+        <button id="theme-toggle" class="btn btn-outline-dark mt-3">Change Theme</button>
+    </header>
 
-    <hr>
+    <div class="container mt-4">
+        <div class="video-container mb-4">
+            <video controls class="w-100">
+                <source src="images/Paris 2024 Olympic Games.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
 
     <main class="container">
         <section class="mb-5">
@@ -104,6 +108,7 @@
             </table>
         </section>
 
+        <!-- Список призёров -->
         <section class="mb-5">
             <h2>Prize Winners</h2>
             <h3>Notable G7 Medalists</h3>
@@ -118,17 +123,6 @@
             </ul>
         </section>
     </main>
-
-    <footer class="text-center p-4 bg-light">
-        <p>Daulet Ermukhanov</p>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="olymp.js"></script>
 </body>
 
 </html>
-
-

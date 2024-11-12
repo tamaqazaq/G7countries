@@ -1,0 +1,114 @@
+/* Светлая тема (по умолчанию) */
+body {
+    --bs-body-bg: #ffffff; /* Фон страницы */
+    --bs-body-color: #000000; /* Цвет текста */
+    --bs-link-color: #0d6efd; /* Цвет ссылок */
+    --bs-navbar-bg: #f8f9fa; /* Фон навбара */
+    --bs-navbar-color: #000000; /* Цвет текста навбара */
+    --bs-btn-bg: #fff; /* Тёмный фон кнопки */
+    --bs-btn-color: #ffffff; /* Светлый текст кнопки */
+    --bs-footer-bg: #f8f9fa; /* Светлый фон футера */
+    --bs-footer-color: #000000;
+    --bs-card-bg: #f8f9fa; /* Фон карточек */
+    --bs-card-border-color: #dee2e6; /* Границы карточек */
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+header {
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+    height: 10vh; /* Высота заголовка */
+}
+
+#theme-toggle {
+    background-color: var(--bs-btn-bg);
+    color: var(--bs-btn-color);
+    border: 1px solid var(--bs-btn-color);
+    padding: 10px 20px; /* Добавляем внутренние отступы */
+    border-radius: 25px; /* Закругляем углы */
+    font-size: 1rem; /* Увеличиваем размер текста */
+    font-weight: bold; /* Делаем текст жирным */
+    cursor: pointer; /* Указываем, что элемент кликабелен */
+    transition: all 0.3s ease; /* Добавляем плавность анимации */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень кнопки */
+}
+#theme-toggle:hover {
+    background-color: var(--bs-btn-color); /* Инверсируем цвета при наведении */
+    color: var(--bs-btn-bg);
+    transform: scale(1.05); /* Лёгкое увеличение кнопки */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Увеличиваем тень */
+}
+
+  
+  /* Навбар для светлой темы */
+.navbar {
+    background-color: var(--bs-navbar-bg);
+    color: var(--bs-navbar-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+  
+.nav-link {
+    color: var(--bs-link-color);
+    transition: color 0.3s;
+}
+  
+  /* Кнопка переключения темы */
+  
+  
+  /* Тёмная тема */
+body.dark-theme {
+    --bs-body-bg: #121212; /* Тёмный фон страницы */
+    --bs-body-color: #ffffff; /* Светлый текст */
+    --bs-link-color: #fff; /* Цвет ссылок */
+    --bs-navbar-bg: #333333; /* Тёмный фон навбара */
+    --bs-navbar-color: #ffffff; /* Цвет текста навбара */
+    --bs-btn-bg: #fff; /* Тёмный фон кнопки */
+    --bs-btn-color: #ffffff; /* Светлый текст кнопки */
+    --bs-card-bg: #1e1e1e; /* Фон карточек */
+    --bs-card-border-color: #444444; /* Границы карточек */
+    --bs-footer-bg: #333333; /* Тёмный фон футера */
+    --bs-footer-color: #ffffff;
+}
+  
+  /* Навбар для тёмной темы */
+body.dark-theme .navbar {
+    background-color: var(--bs-navbar-bg);
+    color: var(--bs-navbar-color);
+  }
+  
+body.dark-theme .nav-link {
+    color: var(--bs-link-color);
+  }
+  
+  /* Кнопка переключения темы */
+body.dark-theme #theme-toggle {
+        background-color: #333; /* Белый фон кнопки для видимости */
+        color: #fff; /* Чёрный текст */
+        border-color: #ffffff; /* Граница кнопки совпадает с фоном */
+    align: center;
+}
+.navbar-brand {
+    color: var(--bs-navbar-brand-color, #000); /* Чёрный текст */
+    transition: color 0.3s; /* Плавное изменение цвета */
+}
+  
+  /* Тёмная тема */
+body.dark-theme .navbar-brand {
+    color: var(--bs-navbar-brand-color-dark, #fff); /* Белый текст */
+}
+
+footer {
+    background-color: var(--bs-footer-bg); /* Фон футера */
+    color: var(--bs-footer-color); /* Цвет текста футера */
+    text-align: center; /* Центрируем текст */
+    padding: 20px; /* Отступы */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавные переходы */
+}
+
+#popup.dark-mode #popupContent {
+  background-color: #333333; /* Dark theme background */
+  color: #ffffff; /* Light text for dark theme */
+}

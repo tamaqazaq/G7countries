@@ -4,53 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - G7 Countries</title>
-    <link href="contactus_styles.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+    <script src="theme.js" defer></script>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">G7 Countries</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="usa.html">USA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="canada.html">Canada</a></li>
+                    <li class="nav-item"><a class="nav-link" href="germany.html">Germany</a></li>
+                    <li class="nav-item"><a class="nav-link" href="japan.html">Japan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="france.html">France</a></li>
+                    <li class="nav-item"><a class="nav-link" href="italy.html">Italy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="uk.html">United Kingdom</a></li>
+                    <li class="nav-item"><a class="nav-link" href="olympics.html">Olympics 2024</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <header>
-        <h1>Welcome to G7 Countries</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="usa.html">USA</a></li>
-                <li><a href="canada.html">Canada</a></li>
-                <li><a href="germany.html">Germany</a></li>
-                <li><a href="japan.html">Japan</a></li>
-                <li><a href="france.html">France</a></li>
-                <li><a href="italy.html">Italy</a></li>
-                <li><a href="uk.html">United Kingdom</a></li>
-                <li><a href="olympics.html">Olympics 2024</a></li>
-            </ul>
-        </nav>
-        <button id="themeToggle" onclick="toggleTheme()">Dark Mode</button>
+        <button id="theme-toggle" class="btn btn-outline-dark mt-3">Change Theme</button>
+    </header>
+    <header class="text-center py-4">
+        <h1 id="greeting">Welcome to G7 Countries</h1>
     </header>
 
-    <hr>
-    <h1 id="greeting"></h1>
-
-    <main id="mainContent">
-        <section>
-            <h2>Get in Touch</h2>
-            <p>If you have any questions, feedback, or inquiries, please feel free to reach out to us using the contact form below.</p>
-            <form id="contactForm">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                
-                <button type="submit">Submit</button>
-            </form>
-            <button onclick="showPopup()">Subscribe to Our Newsletter</button>
-            <button class="animated" onclick="showMap()">Headquarters</button>
-        </section>
         
-        <section>
+
+    <!-- Main Content -->
+    <main id="mainContent" class="container py-5">
+        <!-- Contact Section -->
+        <section class="mb-5">
+            <h2>Get in Touch</h2>
+            <form id="contactForm">
+                <label for="name">Name</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+    
+            <!-- Button Container -->
+            <div class="d-flex gap-3 mt-3">
+                <button class="btn btn-info" onclick="showMap()">Headquarters</button>
+            </div>
+        </section>
+    
+    
+        <section class="mb-5">
             <h2>Contact Information</h2>
             <p>You can also reach us at:</p>
             <ul>
@@ -58,50 +73,61 @@
                 <li>Phone: +7 771 225 45 41</li>
             </ul>
         </section>
-
         <section>
-            <h2 id="faq">Frequently Asked Questions</h2> 
-            <div class="accordion">What is the G7?</div>
-            <div class="panel">
-                <p>The Group of Seven (G7) is an intergovernmental political and economic forum consisting of Canada, France, Germany, Italy, Japan, the United Kingdom, and the United States.</p>
-            </div>
-            <div class="accordion">How often does the G7 meet?</div>
-            <div class="panel">
-                <p>The G7 leaders meet annually at the G7 Summit, while other officials meet throughout the year.</p>
-            </div>
-            <div class="accordion">What are the main topics discussed at G7 summits?</div>
-            <div class="panel">
-                <p>Key topics include trade, security, economics, and climate change.</p>
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What is the G7?</button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            The Group of Seven (G7) is an intergovernmental forum consisting of Canada, France, Germany, Italy, Japan, the United Kingdom, and the United States.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How often does the G7 meet?</button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            The G7 leaders meet annually at the G7 Summit, with other meetings throughout the year.
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- Date and Time -->
         <section>
             <h2>Current Date and Time</h2>
             <p id="dateTime"></p>
         </section>
-
-        
     </main>
 
-    <div id="popup">
-        <div id="popupContent">
+    <!-- Popup -->
+    <div id="popup" class="d-none">
+        <div id="popupContent" class="p-4 border rounded bg-light">
             <h2>Subscribe to Our Newsletter</h2>
             <form id="subscriptionForm">
                 <label for="subEmail">Email:</label><br>
                 <input type="email" id="subEmail" name="subEmail" required><br><br>
-                <button type="submit">Subscribe</button>
+                <button type="submit" class="btn btn-success">Subscribe</button>
             </form>
-            <button onclick="closePopup()">Close</button>
+            <button onclick="closePopup()" class="btn btn-danger mt-3">Close</button>
         </div>
     </div>
-    
-    <section id="mapSection" style="display: none;"> <!-- Секция карты скрыта по умолчанию -->
+
+    <!-- Map Section -->
+    <section id="mapSection" style="display: none;">
         <h2>Map</h2>
-        <div id="map"></div> 
+        <div id="map" style="height: 400px;"></div>
     </section>
 
+   
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-    <script src="theme.js"></script>
 </body>
 </html>

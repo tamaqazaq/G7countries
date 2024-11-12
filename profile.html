@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - G7 Countries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">G7 Countries</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="usa.html">USA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="canada.html">Canada</a></li>
+                    <li class="nav-item"><a class="nav-link" href="germany.html">Germany</a></li>
+                    <li class="nav-item"><a class="nav-link" href="japan.html">Japan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="france.html">France</a></li>
+                    <li class="nav-item"><a class="nav-link" href="italy.html">Italy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="uk.html">United Kingdom</a></li>
+                    <li class="nav-item"><a class="nav-link" href="olympics.html">Olympics 2024</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+                </ul>
+                <button id="logoutButton" class="btn btn-danger">Logout</button>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <button id="theme-toggle" class="btn btn-outline-dark mt-3">Change theme</button>
+    </header>
+
+
+    <!-- Profile Section -->
+    <div class="container mt-5">
+        <h1>Your Profile</h1>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Welcome, <span id="profile-username"></span>!</h5>
+                <p><strong>Username:</strong> <span id="profile-username-details"></span></p>
+                <p><strong>Password:</strong> <span id="profile-password"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve data from localStorage
+        const username = localStorage.getItem('username');
+        const password = localStorage.getItem('password');
+
+        // If no user data is available, redirect to login
+        if (!username || !password) {
+            alert('Please log in first!');
+            window.location.href = 'login.html';
+        } else {
+            // Display user data
+            document.getElementById('profile-username').textContent = username;
+            document.getElementById('profile-username-details').textContent = username;
+            document.getElementById('profile-password').textContent = password;
+        }
+
+        // Logout functionality
+        document.getElementById('logoutButton').addEventListener('click', function () {
+            localStorage.clear(); // Clear localStorage data
+            window.location.href = 'login.html'; // Redirect to login
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
