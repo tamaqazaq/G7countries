@@ -1,8 +1,4 @@
 
-function logout() {
-    
-    window.location.href = "login.html";
-}
 
 const g7Countries = [
     {
