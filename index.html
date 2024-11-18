@@ -37,32 +37,7 @@
     <header>
         <button id="theme-toggle" class="btn btn-outline-dark mt-3">Change theme</button>
     </header>
-    <div id="profile-section" style="display: none;">
-        <h2>Welcome, <span id="profile-name"></span>!</h2>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Your Details</h5>
-                <p><strong>Username:</strong> <span id="profile-username"></span></p>
-                <p><strong>Password:</strong> <span id="profile-password"></span></p>
-            </div>
-        </div>
-        <button id="logoutButton" class="btn btn-danger mt-3">Logout</button>
-    </div>
-    <div class="container mt-4">
-        <!-- Profile Section -->
-        <div id="profile-section" style="display: none;">
-            <h2>Welcome, <span id="profile-name"></span>!</h2>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Account Details</h5>
-                    <p><strong>Name:</strong> <span id="profile-name-full"></span></p>
-                    <p><strong>Email:</strong> <span id="profile-email"></span></p>
-                </div>
-            </div>
-            <button id="logoutButton" class="btn btn-danger mt-3">Logout</button>
-        </div>
-    
-        <!-- Main Content (Hidden for Logged-In Users) -->
+    <div class="container">
         <div id="main-content">
             <h1>G7 Countries</h1>
             <div class="row">
@@ -72,7 +47,7 @@
                 </div>
                 <div class="col-md-8">
                     <h2>About G7</h2>
-                    <p>The <strong>Group of Seven (G7)</strong> is an intergovernmental political and economic forum consisting of <strong>Canada, France, Germany, Italy, Japan, the United Kingdom</strong>, and the <strong>United States</strong>. It discusses and coordinates solutions to global issues like <strong>trade, security, economics, and climate change</strong>.</p>
+                    <p>The <strong>Group of Seven (G7)</strong> is an intergovernmental political and economic forum...</p>
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Founded</h5>
@@ -93,83 +68,39 @@
                     </div>
                 </div>
             </div>
-            <audio id="backgroundMusic" src="audio/G7.mp3" preload="auto" loop></audio>
-            <button id="playMusicButton" class="btn btn-custom mt-3 mb-3">Play Music</button>
         </div>
+        <audio id="backgroundMusic" src="audio/G7.mp3" preload="auto" loop></audio>
+        <button id="playMusicButton" class="btn btn-custom mt-3 mb-3">Play Music</button>
     </div>
 
-        <script>
-                    document.getElementById('playMusicButton').addEventListener('click', function() {
-            var audio = document.getElementById('backgroundMusic');
-            audio.play();
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const logoutButton = document.getElementById("logoutButton");
+            const loggedInUser = localStorage.getItem("loggedInUser");
+
+            // Check if user is logged in
+            if (!loggedInUser) {
+                alert("Please log in first.");
+                window.location.href = "login.html";
+                return;
+            }
+
+            // Add functionality to logout button
+            logoutButton.addEventListener("click", function () {
+                // Clear user data
+                localStorage.removeItem("loggedInUser");
+                alert("You have been logged out!");
+                window.location.href = "login.html";
+            });
+
+            // Music button functionality
+            document.getElementById("playMusicButton").addEventListener("click", function () {
+                const audio = document.getElementById("backgroundMusic");
+                audio.play();
+            });
         });
-        </script>
-        <div class="row mt-5">
-            <div class="col-12">
-                <h2>Latest News</h2>
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="images/news1.png" class="d-block w-100" alt="News Image 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/news2.png" class="d-block w-100" alt="News Image 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/news3.png" class="d-block w-100" alt="News Image 3">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-<script>
-    document.getElementById("logoutButton").addEventListener("click", function () {
-    // Optionally clear session data if needed
-    sessionStorage.clear();
-    localStorage.clear();
+    </script>
 
-    // Redirect to login.html
-    window.location.href = "login.html";
-});
-</script>
-<script>
-    // Check if user is logged in
-    if (sessionStorage.getItem('username') && sessionStorage.getItem('password')) {
-        // Show the profile section
-        document.getElementById('profile-section').style.display = 'block';
-        document.getElementById('main-content').style.display = 'none';
-
-        // Display user details
-        document.getElementById('profile-name').textContent = sessionStorage.getItem('username');
-        document.getElementById('profile-username').textContent = sessionStorage.getItem('username');
-        document.getElementById('profile-password').textContent = sessionStorage.getItem('password');
-    } else {
-        // Show the main content if no user is logged in
-        document.getElementById('profile-section').style.display = 'none';
-        document.getElementById('main-content').style.display = 'block';
-    }
-
-    // Logout functionality
-    document.getElementById('logoutButton').addEventListener('click', function () {
-        sessionStorage.clear(); // Clear session data
-        window.location.reload(); // Reload the page
-    });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
